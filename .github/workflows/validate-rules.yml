@@ -12,6 +12,18 @@ jobs:
       - uses: actions/checkout@v4
       - name: Check legacy compatibility files
         run: |
-          cmp rules/domain/apple.yaml apple.yaml
-          cmp rules/classical/openai.yaml openai.yaml
-          cmp snippets/instagram.list "instagram (2).list"
+          python - <<'PY'
+          from pathlib import Path
+
+          pairs = [
+              ('rules/domain/apple.yaml', 'apple.yaml'),
+              ('rules/classical/openai.yaml', 'openai.yaml'),
+              ('snippets/instagram.list', 'instagram (2).list'),
+          ]
+
+          for canonical, legacy in pairs:
+              left = Path(canonical).read_text(encoding='utf-8').splitlines()
+              right = Path(legacy).read_text(encoding='utf-8').splitlines()
+              if left != right:
+                  raise SystemExit(f'{legacy} is out of sync with {canonical}')
+          PY
