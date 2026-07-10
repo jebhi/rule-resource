@@ -1,0 +1,29 @@
+name: Validate rule layout
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check legacy compatibility files
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          pairs = [
+              ('rules/classical/apple.yaml', 'apple.yaml'),
+              ('rules/classical/openai.yaml', 'openai.yaml'),
+              ('rules/classical/instagram.yaml', 'instagram (2).list'),
+          ]
+
+          for canonical, legacy in pairs:
+              left = Path(canonical).read_text(encoding='utf-8').splitlines()
+              right = Path(legacy).read_text(encoding='utf-8').splitlines()
+              if left != right:
+                  raise SystemExit(f'{legacy} is out of sync with {canonical}')
+          PY

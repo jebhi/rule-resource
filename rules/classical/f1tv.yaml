@@ -1,0 +1,21 @@
+payload:
+  - DOMAIN-SUFFIX,formula1.com
+  - DOMAIN,f1tv.formula1.com
+  - DOMAIN,api.formula1.com
+  - DOMAIN,account-api.formula1.com
+  - DOMAIN,consent.formula1.com
+  - DOMAIN,config.immersivetranslate.com
+  - DOMAIN-SUFFIX,f1cdn.net
+  - DOMAIN-SUFFIX,f1-cdn.net
+  - DOMAIN,f1tv-cdn.formula1.com
+  - DOMAIN,streaming.formula1.com
+  - DOMAIN,auth.formula1.com
+  - DOMAIN,login.formula1.com
+  - DOMAIN,sso.formula1.com
+  - DOMAIN,ariane.abtasty.com
+  - DOMAIN,analytics.formula1.com
+  - DOMAIN,images.formula1.com
+  - DOMAIN,static.formula1.com
+  - DOMAIN,assets.formula1.com
+  - DOMAIN-KEYWORD,formula1
+  - DOMAIN-KEYWORD,f1tv
