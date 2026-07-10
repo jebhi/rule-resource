@@ -1,0 +1,17 @@
+name: Validate rule layout
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check legacy compatibility files
+        run: |
+          cmp rules/domain/apple.yaml apple.yaml
+          cmp rules/classical/openai.yaml openai.yaml
+          cmp snippets/instagram.list "instagram (2).list"
