@@ -16,9 +16,9 @@ jobs:
           from pathlib import Path
 
           pairs = [
-              ('rules/domain/apple.yaml', 'apple.yaml'),
+              ('rules/classical/apple.yaml', 'apple.yaml'),
               ('rules/classical/openai.yaml', 'openai.yaml'),
-              ('snippets/instagram.list', 'instagram (2).list'),
+              ('rules/classical/instagram.yaml', 'instagram (2).list'),
           ]
 
           for canonical, legacy in pairs:
