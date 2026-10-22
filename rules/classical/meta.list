@@ -1,0 +1,27 @@
+# Meta / Meta AI / Muse
+# 纯文本 classical 格式，Surge RULE-SET 与 Mihomo rule-provider（format: text）通用
+# Instagram 另见 instagram.yaml
+
+# Meta AI / Muse
+DOMAIN-SUFFIX,meta.ai
+DOMAIN-SUFFIX,metaaivm.com
+DOMAIN-SUFFIX,muse.ai
+DOMAIN-SUFFIX,llama.com
+
+# Meta 账号与主站
+DOMAIN-SUFFIX,meta.com
+DOMAIN-SUFFIX,facebook.com
+DOMAIN-SUFFIX,facebook.net
+DOMAIN-SUFFIX,fb.com
+DOMAIN-SUFFIX,fb.me
+DOMAIN-SUFFIX,fbcdn.net
+DOMAIN-SUFFIX,fbsbx.com
+
+# Messenger / WhatsApp / Threads
+DOMAIN-SUFFIX,messenger.com
+DOMAIN-SUFFIX,m.me
+DOMAIN-SUFFIX,whatsapp.com
+DOMAIN-SUFFIX,whatsapp.net
+DOMAIN-SUFFIX,wa.me
+DOMAIN-SUFFIX,threads.net
+DOMAIN-SUFFIX,threads.com
