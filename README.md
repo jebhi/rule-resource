@@ -14,6 +14,9 @@
 │       ├── meta.list
 │       ├── n26.yaml
 │       └── openai.yaml
+├── config/
+│   ├── surge.conf
+│   └── clash.yaml
 ├── scripts/
 │   └── sync-legacy.sh
 ├── .github/workflows/
@@ -63,6 +66,15 @@ rule-providers:
 rules:
   - RULE-SET,meta,Proxy
 ```
+
+## 完整配置
+
+`config/` 中是完整的客户端配置，两份的策略组和规则保持一致：
+
+- `config/surge.conf`：Surge
+- `config/clash.yaml`：Mihomo（Clash Meta），由 Surge 配置转换而来
+
+两份都不包含节点订阅，也不包含 MITM 证书私钥。真实订阅链接请在本地填写，不要提交到本仓库。
 
 ## 兼容策略
 
