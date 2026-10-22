@@ -11,6 +11,7 @@
 │       ├── apple.yaml
 │       ├── f1tv.yaml
 │       ├── instagram.yaml
+│       ├── meta.list
 │       ├── n26.yaml
 │       └── openai.yaml
 ├── scripts/
@@ -33,6 +34,35 @@
 - `rules/classical/instagram.yaml`
 - `rules/classical/n26.yaml`
 - `rules/classical/openai.yaml`
+
+### 纯文本规则（Surge / Mihomo 通用）
+
+`.list` 文件为纯文本 classical 格式（每行一条规则，无 `payload:`），可同时用于 Surge 和 Mihomo：
+
+- `rules/classical/meta.list`：Meta、Meta AI / Muse、Messenger、WhatsApp、Threads
+
+Surge：
+
+```ini
+[Rule]
+RULE-SET,https://raw.githubusercontent.com/jebhi/rule-resource/main/rules/classical/meta.list,Proxy
+```
+
+Mihomo（必须声明 `format: text`）：
+
+```yaml
+rule-providers:
+  meta:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/jebhi/rule-resource/main/rules/classical/meta.list
+    path: ./ruleset/meta.list
+    interval: 86400
+
+rules:
+  - RULE-SET,meta,Proxy
+```
 
 ## 兼容策略
 
