@@ -59,6 +59,7 @@ rule-providers:
     url: https://raw.githubusercontent.com/jebhi/rule-resource/main/rules/classical/meta.list
     path: ./ruleset/meta.list
     interval: 86400
+    proxy: 默认节点   # GitHub 在国内直连常常连不上，规则集通过节点下载
 
 proxy-groups:
   - name: "默认节点"
