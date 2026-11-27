@@ -5,3 +5,6 @@ payload:
   - DOMAIN-SUFFIX,ig.me
   - DOMAIN-SUFFIX,igcdn.com
   - DOMAIN-SUFFIX,instagr.am
+  - DOMAIN,edge-mqtt.facebook.com
+  - DOMAIN,graph.facebook.com
+  - DOMAIN,f8d88af0-b7a5-495e-b501-fadeded4a82a-netseer-ipaddr-assoc.xy.fbcdn.net
